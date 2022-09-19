@@ -1,18 +1,31 @@
-# HAL-3B00
-An approaching-distance sensor for the Raspberry Pi 3
+# HAL 3B00
+*(pronounced HAL 3-B-Thousand.)* A change-in-distance sensor for the Raspberry Pi 3
 
 ![HAL3B00_demo1](https://user-images.githubusercontent.com/84039166/190937533-196f0f39-fb8a-4758-8dfb-87f82211b5ac.gif)
 
-This little robot uses the convenience of the [SparkFun Qwiic system](https://www.sparkfun.com/products/15945) and the compact-form [Pimoroni LED Shim](https://shop.pimoroni.com/products/led-shim) to quickly assemble all the necessary the hardware and Python code. It communicates visually how close a person is from your placement of the sensor, with precision to 1 millimeter. Optionally, it can store the real-time measurement in [Pantry Cloud](https://getpantry.cloud/) for another device to check it remotely.
+This little robot uses the convenience of the [SparkFun Qwiic system](https://www.sparkfun.com/products/15945) and the compact-form [Pimoroni LED Shim](https://shop.pimoroni.com/products/led-shim) to quickly assemble all the necessary the hardware and Python code. It communicates visually how close an object is from your placement of the sensor. Optionally, it can store the real-time measurement in [Pantry Cloud](https://getpantry.cloud/) for another device to check it remotely.
+
+In its default mode, the Distance Sensor VL53L1X has a maximum range of 4 meters, with the (pretty amazing) ability to measure in 1mm increments. It works fine in the dark as well as indoors; it can have trouble with accurate readings when used outdoors in strong sunlight. It also has a short-distance mode, which limits its range to 1.3 meters but with better resilience to ambient light.
+
+## Use Cases
+The purpose of the LED graph here is to demonstrate the sensor's ability and sensitivity. But in a final product, there is no need to display this publicly; HAL 3B00 could simply sense invisibly in real-time; you can work out a notification of some sort when the value meets a specific condition. For example:
+
+- Placed on a nightstand, beaming down (parallel) to the bed, HAL 3B00 would detect if a someone gets up and, unavoidably, crosses the beam. The measurement would go from 4000mm/∞ to something more like 1000-2500mm. People who are caring for a spouse suffering from dementia know the fear of discovering their loved one has wandered off outside. 
+- In similar fashion, HAL 3B00 could be placed at the base of any doorway and serve as a silent tripwire (1000mm/∞ drops to something like 500mm or less)
+
+Using the sensor's *short-distance* mode, the trigger could be the opposite:
+
+- Strategically placed within 1m of your **most prized possession**, HAL 3B00 is a watchdog that could alert you if your stupid younger brother takes it.... or moves it even one millimeter.
 
 ## Parts List
 
 - Raspberry Pi 3B+
     - (This project would work fine on the 3A+, too, but a different case would be needed)
+    - (Any 4B+ would also work, but this project won't take advantage of its higher specs)
 - Micro SD card with standard Raspberry Pi OS
 - Appropriate micro-USB Power Supply for the Pi
 - SparkFun [Qwiic pHAT 2.0 for Raspberry Pi](https://www.sparkfun.com/products/15945) - *approx. $7*
-- SparkFun [Distance Sensor Breakout - 4m, VL53L1X](https://www.sparkfun.com/products/14722) - *approx. $24*
+- SparkFun [Distance Sensor Breakout - 4 Meters (VL53L1X)](https://www.sparkfun.com/products/14722) - *approx. $24*
 - 1 x SparkFun [Qwiic Cable - 50mm](https://www.sparkfun.com/products/14426) - *$1*
     - Or, buy a [kit of various cable lengths](https://www.sparkfun.com/products/15081) if you want flexibility in the placement of the sensor, away from the case 
 - 1 x [2x20 pin Female GPIO Booster Header, 5mm](https://shop.pimoroni.com/products/booster-header?variant=47414520906) - *approx. $2*
