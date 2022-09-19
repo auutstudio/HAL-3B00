@@ -39,7 +39,15 @@ Using the sensor's *short-distance* mode, the trigger could be the opposite:
 - [Smraza Raspberry Pi 3 B+ Case with Fan/Heat Sinks](https://smile.amazon.com/Smraza-Raspberry-Heatsinks-Supply-Compatible/dp/B07GKXZH7X)
     - This particular kit happens to include a micro-USB Power Supply
 - [PopSockets phone grip, HAL9000 design](https://smile.amazon.com/gp/product/B07V98PLHR/) - to have the desired terrifying effect on people born before 1975
-    
+
+### Temporary Parts
+- To setup the OS and program in Python the first time:
+    - a USB keyboard and mouse
+    - monitor and HDMI cable
+- To modify the Smraza case:
+    - Xacto knife with 1 blade cartridge that you are willing to ruin
+    - Small phillips screwdriver
+
 ### Incompatible Parts
 
 - Originally I tried to incorporate a [Fan Shim](https://shop.pimoroni.com/products/fan-shim?variant=29210095812691) for active cooling, but unfortunately it conflicts with the same pin used by the LED Shim, and then the LED Shim is not detected.
