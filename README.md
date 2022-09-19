@@ -1,6 +1,8 @@
 # HAL-3B00
 An approaching-distance sensor for the Raspberry Pi 3
 
+![HAL3B00_demo1](https://user-images.githubusercontent.com/84039166/190937533-196f0f39-fb8a-4758-8dfb-87f82211b5ac.gif)
+
 This little robot uses the convenience of the [SparkFun Qwiic system](https://www.sparkfun.com/products/15945) and the compact-form [Pimoroni LED Shim](https://shop.pimoroni.com/products/led-shim) to quickly assemble all the necessary the hardware and Python code. It communicates visually how close a person is from your placement of the sensor, with precision to 1 millimeter. Optionally, it can store the real-time measurement in [Pantry Cloud](https://getpantry.cloud/) for another device to check it remotely.
 
 ## Parts List
